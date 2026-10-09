@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ur-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Seekho – AI Tools & Software Tutorials</title>
+<meta name="description" content="AI tools aur software ke aasan tutorials Roman Urdu mein.">
+<style>
+:root{--bg:#f7f8fc;--card:#fff;--text:#1a1d2e;--muted:#5f6680;--brand:#5b4bff;--brand2:#00b8d9;--line:#e3e6f0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1220;--card:#181c30;--text:#eef0fa;--muted:#9aa2c4;--line:#2a3050;--brand:#8b80ff}}
+:root[data-theme="dark"]{--bg:#0f1220;--card:#181c30;--text:#eef0fa;--muted:#9aa2c4;--line:#2a3050;--brand:#8b80ff}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65}
+a{color:var(--brand);text-decoration:none}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--card);border-bottom:1px solid var(--line);z-index:5}
+.bar{max-width:980px;margin:auto;padding:12px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:1.25rem;color:var(--text);cursor:pointer}
+.logo span{background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{margin-left:auto;display:flex;gap:14px;align-items:center;font-size:.95rem}
+nav a{color:var(--muted);cursor:pointer}
+nav a:hover{color:var(--brand)}
+button{font:inherit;cursor:pointer}
+.theme{border:1px solid var(--line);background:none;color:var(--text);border-radius:8px;padding:4px 9px}
+main{max-width:980px;margin:auto;padding:16px}
+.hero{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border-radius:18px;padding:34px 22px;margin:8px 0 22px}
+.hero h1{margin:0 0 8px;font-size:1.7rem;line-height:1.25}
+.hero p{margin:0 0 16px;opacity:.95}
+.search{width:100%;max-width:440px;padding:12px 14px;border-radius:10px;border:0;font:inherit;color:#111}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:6px 14px;font-size:.9rem}
+.chip.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;cursor:pointer;display:flex;flex-direction:column;gap:8px;transition:transform .15s}
+.card:hover{transform:translateY(-3px)}
+.tag{font-size:.75rem;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.04em}
+.card h3{margin:0;font-size:1.05rem;line-height:1.35}
+.card p{margin:0;color:var(--muted);font-size:.9rem}
+.meta{font-size:.8rem;color:var(--muted);margin-top:auto}
+.ad{border:1px dashed var(--line);color:var(--muted);text-align:center;padding:18px;border-radius:12px;margin:22px 0;font-size:.85rem}
+article{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;max-width:760px;margin:auto}
+article h1{font-size:1.55rem;line-height:1.3;margin:6px 0 4px}
+article h2{font-size:1.15rem;margin:22px 0 6px}
+article li{margin:4px 0}
+article pre,article .prompt{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px;overflow-x:auto;white-space:pre-wrap;font-size:.9rem}
+.back{background:none;border:0;color:var(--brand);padding:0;margin-bottom:12px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;max-width:760px;margin:auto}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:26px 16px 40px}
+input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:inherit;margin:6px 0}
+.btn{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 18px}
+.empty{color:var(--muted);text-align:center;padding:30px}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<div class="logo" onclick="go('')">AI <span>Seekho</span></div>
+<nav><a onclick="go('')">Home</a><a onclick="go('about')">About</a><a onclick="go('contact')">Contact</a><button class="theme" id="th" aria-label="Theme">◐</button></nav>
+</div></header>
+<main id="app"></main>
+<footer>© <span id="yr"></span> AI Seekho · AI tools aur software tutorials Roman Urdu mein<br><a onclick="go('privacy')">Privacy Policy</a></footer>
+
+<script>
+var A=[
+{id:"ai-blog-writing-guide",cat:"Blogging",t:"How to Use AI to Write Better Blog Posts (Step-by-Step Guide)",d:"A practical workflow from idea to published post.",m:7,b:`<p>AI can save you hours when writing blog posts, but only if you use it as an assistant, not as a replacement for your own voice. Here is a simple workflow you can follow today.</p>
+<h2>Step 1: Find a topic people search for</h2><p>Ask an AI chatbot for 20 topic ideas in your niche. Then check each idea in Google: type it in the search bar and look at the suggestions. Pick topics that real people are asking about.</p>
+<div class="prompt">Give me 20 blog post ideas about free AI tools for beginners. Focus on questions people ask in search engines.</div>
+<h2>Step 2: Build an outline first</h2><p>Never ask for a full article at once. Ask for an outline with an introduction, 5 to 7 headings and a conclusion. Edit it so it matches what you actually know.</p>
+<h2>Step 3: Write section by section</h2><p>Ask the AI to draft one heading at a time. Give it context: who the reader is, how long the section should be, and what tone to use.</p>
+<div class="prompt">Write a 150-word section titled "How to write a good prompt" for beginners. Use simple English and one practical example.</div>
+<h2>Step 4: Add your own experience</h2><p>This is the step that makes your post different from thousands of others. Add your own screenshots, mistakes you made, results you got and opinions. Readers and search engines both value original, helpful content.</p>
+<h2>Step 5: Fact-check everything</h2><p>AI can sound confident and still be wrong. Verify every number, tool name, price and claim before publishing. If you cannot confirm something, remove it.</p>
+<h2>Step 6: Edit and publish</h2><ul><li>Rewrite the introduction in your own words.</li><li>Use short paragraphs and clear headings.</li><li>Write a title that says exactly what the reader will learn.</li><li>Add a short summary at the end.</li></ul>
+<h2>Common mistakes</h2><ul><li>Copy-pasting AI text without editing.</li><li>Publishing without checking facts.</li><li>Writing about topics you know nothing about.</li><li>Using the same generic phrases in every post.</li></ul>
+<h2>Final tip</h2><p>Aim for quality over quantity. One genuinely useful post is worth more than ten copied ones. Publish consistently, improve old posts, and your blog will grow over time.</p>`},
+{id:"free-ai-tools-students",cat:"AI Tools",t:"Best Free AI Tools for Students: What to Use and How",d:"Tool categories for writing, research, design and study.",m:6,b:`<p>Students can use AI to study smarter, but the right tool depends on the task. Free plans and limits change often, so always check the official website before relying on a tool.</p>
+<h2>1. AI chatbots for explanations and writing help</h2><p>Chatbots such as Claude, ChatGPT and Gemini can explain difficult topics in simple language, help you plan an essay and check your grammar.</p>
+<div class="prompt">Explain photosynthesis to a 9th grade student in 5 simple points, with one everyday example.</div>
+<h2>2. Note-taking and organizing</h2><p>Google Docs, Notion and similar apps help you keep notes in one place. Some include AI features that summarize long notes. Always read the original material too.</p>
+<h2>3. Design and presentations</h2><p>Canva and Google Slides let you make posters and presentations with ready-made templates. Choose a clean template, use large text and keep each slide to one idea.</p>
+<h2>4. Translation and language practice</h2><p>Google Translate is useful for understanding text in another language. For learning, try writing a sentence yourself first and then ask an AI chatbot to correct it and explain the mistakes.</p>
+<h2>5. Video and editing</h2><p>CapCut is a popular free app for editing short videos for school projects or a YouTube channel.</p>
+<h2>How to use AI responsibly</h2><ul><li><b>Learn, do not just copy.</b> Submitting AI-written work as your own can break school rules and stops you from learning.</li><li><b>Verify facts.</b> AI can make mistakes, so check important information in books or trusted websites.</li><li><b>Protect your privacy.</b> Never enter passwords, ID numbers or private details into any AI tool.</li><li><b>Follow your school's rules</b> about AI use.</li></ul>
+<h2>A simple study routine</h2><ol><li>Read the lesson yourself first.</li><li>Ask AI to explain the parts you did not understand.</li><li>Ask it to quiz you with 10 questions.</li><li>Check your answers against your book.</li></ol><p>Used this way, AI becomes a study partner instead of a shortcut.</p>`},
+{id:"prompt-likhna",cat:"AI Basics",t:"AI se behtar jawab kaise lein: Prompt likhne ka aasan tareeqa",d:"Chatbot ko sahi hukm dena seekhein.",m:5,b:`<p>AI chatbot (jaise Claude ya ChatGPT) utna hi acha jawab deta hai jitna acha aapka sawal hota hai. Is ko <b>prompt</b> kehte hain.</p>
+<h2>Acha prompt ke 4 hisse</h2><ol><li><b>Role:</b> AI ko batayein wo kaun hai (maslan "tum ek teacher ho").</li><li><b>Kaam:</b> Saaf likhein kya karna hai.</li><li><b>Context:</b> Kis ke liye hai, kitni lambai, kaun si zaban.</li><li><b>Format:</b> List, table, ya paragraph.</li></ol>
+<h2>Misaal</h2><div class="prompt">Tum ek class 9 ke teacher ho. Mujhe photosynthesis Roman Urdu mein 5 aasan points mein samjhao, ek rozmarra ki misaal ke saath.</div>
+<h2>Tips</h2><ul><li>Pehle jawab ke baad poochein: "isay aur chhota karo" ya "aur aasan karo".</li><li>Mushkil kaam ko chhote steps mein tor dein.</li><li>AI ke diye hue facts aur numbers hamesha khud check karein.</li></ul>`},
+{id:"ai-blog-post",cat:"Blogging",t:"AI ki madad se blog post likhne ka step-by-step tareeqa",d:"Idea se publish tak ka pura process.",m:6,b:`<p>AI se poori post copy-paste na karein. Isay <b>assistant</b> ki tarah use karein aur apni awaz shamil karein.</p>
+<h2>Steps</h2><ol><li><b>Topic chunein:</b> AI se 20 ideas maangein, phir wo chunein jo log Google par search karte hain.</li><li><b>Outline banwayein:</b> Heading aur sub-headings ki list.</li><li><b>Draft likhwayein:</b> Har heading ka paragraph alag se maangein.</li><li><b>Apna tajurba jorein:</b> Khud ki screenshots, examples aur raaye shamil karein.</li><li><b>Fact check:</b> Har dawa aur number verify karein.</li><li><b>Publish:</b> Blogger mein "New Post" dabayein, title, labels aur photo lagayein.</li></ol>
+<div class="prompt">Mujhe "free AI tools for students" par blog post ki outline do: 1 intro, 6 headings, aur ek conclusion. Roman Urdu mein.</div>
+<h2>Yaad rakhein</h2><p>Google asli, madadgar content ko pasand karta hai. Sirf AI ka likha hua bina badle post karne se rank karna mushkil hota hai.</p>`},
+{id:"canva-thumbnail",cat:"Design",t:"Canva se YouTube thumbnail aur poster banana",d:"Bina design ke tajurbe ke professional look.",m:5,b:`<p>Canva ek free design tool hai jo browser aur mobile app dono mein chalta hai.</p>
+<h2>Thumbnail ke steps</h2><ol><li>canva.com par Gmail se login karein.</li><li>"Create a design" mein <b>YouTube Thumbnail</b> chunein (1280×720).</li><li>Template chunein ya khali page se shuru karein.</li><li>Bari, saaf text likhein (3 se 5 lafz).</li><li>Apni photo ya image upload karein aur background hatayein (agar aapke plan mein ye feature maujood ho).</li><li>Download dabayein, PNG chunein.</li></ol>
+<h2>Design tips</h2><ul><li>Roshan rang aur gehra contrast rakhein.</li><li>Text mobile par bhi parha jana chahiye.</li><li>Har video ke liye ek jaisa style rakhein taake channel pehchana jaye.</li></ul><p>Canva ke AI features aur plans waqt ke saath badalte hain, isliye app mein dekh lein kya kya free hai.</p>`},
+{id:"capcut-edit",cat:"Video Editing",t:"CapCut mein mobile par video edit karna: shuruaat",d:"Cut, text, music aur export seekhein.",m:6,b:`<p>CapCut mobile aur PC dono par video editing ke liye mashhoor app hai.</p>
+<h2>Basic editing</h2><ol><li>App kholein, <b>New Project</b> dabayein aur video chunein.</li><li><b>Split:</b> timeline par jahan kaatna ho wahan line rakh kar Split dabayein.</li><li>Be-kaar hissa select kar ke <b>Delete</b> karein.</li><li><b>Text:</b> Text &gt; Add text, phir font, rang aur animation chunein.</li><li><b>Audio:</b> Audio &gt; Sounds se music lagayein; awaz kam rakhein taake bolna saaf sunayi de.</li><li><b>Captions:</b> Auto captions ka option istemal kar ke subtitles banayein, phir ghaltiyan khud theek karein.</li><li>Upar right kone se resolution chun kar <b>Export</b> karein.</li></ol>
+<h2>Tip</h2><p>Shuru mein 1 minute ki chhoti video banayein. Practice se speed aa jati hai.</p>`},
+{id:"free-ai-tools",cat:"AI Tools",t:"Students ke liye kaam ke AI tools: kya kis ke liye?",d:"Likhna, design, video aur research ke liye categories.",m:4,b:`<p>Neeche tools ki <b>categories</b> hain. Free limits aur features badalte rehte hain, isliye istemal se pehle website par check karein.</p>
+<h2>Kaam ke hisaab se</h2><ul><li><b>Likhna aur samajhna:</b> AI chatbots (Claude, ChatGPT, Gemini).</li><li><b>Design:</b> Canva.</li><li><b>Video editing:</b> CapCut.</li><li><b>Presentation:</b> Google Slides, Canva presentations.</li><li><b>Translation:</b> Google Translate.</li><li><b>Notes:</b> Google Docs, Notion.</li></ul>
+<h2>Samajhdari se istemal</h2><ul><li>Assignment AI se likhwa kar jama na karein; isse seekhna ruk jata hai.</li><li>Apni zaati maloomat (password, ID) kisi tool mein na likhein.</li><li>Jawab ko hamesha dobara check karein.</li></ul>`},
+{id:"youtube-seo",cat:"YouTube",t:"AI se YouTube video ke title, description aur ideas banana",d:"SEO ke liye behtar titles aur tags.",m:5,b:`<p>AI aapko ideas aur draft de sakta hai, lekin aakhri faisla aapka hona chahiye.</p>
+<h2>Kya kya maang sakte hain</h2><ol><li>10 video ideas apne niche ke mutabiq.</li><li>Har idea ke 5 title options.</li><li>Description ka draft jis mein pehli 2 lines mein topic saaf ho.</li><li>Video ka chapter list.</li></ol>
+<div class="prompt">Meri YouTube channel Pashto/Urdu mein AI tutorials ki hai. "Canva se thumbnail banana" video ke liye 5 title aur ek description likho. Title 60 characters se kam rakho.</div>
+<h2>Check karein</h2><ul><li>Title mein asli keyword shuru mein ho.</li><li>Thumbnail aur title ek doosre ko support karein.</li><li>Video ka content title ka wada poora kare.</li></ul>`},
+{id:"adsense",cat:"Earning",t:"Blog se kamai: Google AdSense ke liye tayyari",d:"Approval ke liye kya zaroori hai.",m:5,b:`<p>AdSense ke liye aapko Google ki policies par poora utarna hota hai. Koi guarantee nahi ke approval foran mile.</p>
+<h2>Tayyari checklist</h2><ul><li>20 se 30 asli, kaam ke articles.</li><li>About, Contact aur Privacy Policy pages.</li><li>Saaf design aur mobile par theek chalne wali site.</li><li>Apna asli content; doosron ki copy nahi.</li><li>Kuch na kuch roz ka traffic.</li></ul>
+<h2>Doosray tareeqe</h2><ul><li><b>Affiliate links:</b> Kisi product ki sifarish aur commission.</li><li><b>Apna course ya PDF:</b> Apni maharat bechna.</li><li><b>Sponsorship:</b> Traffic barhne ke baad.</li></ul><p>Sabar rakhein: aam taur par pehli kamai tak kai mahine lag sakte hain.</p>`}
+];
+var cats=["All"].concat(A.map(a=>a.cat).filter((v,i,s)=>s.indexOf(v)===i));
+var cur="All",q="",app=document.getElementById('app');
+function go(h){location.hash=h;}
+function home(){
+ var list=A.filter(a=>(cur=="All"||a.cat==cur)&&(a.t+a.d).toLowerCase().includes(q.toLowerCase()));
+ app.innerHTML=`<section class="hero"><h1>AI tools aur software seekho, aasan Roman Urdu mein</h1><p>Step-by-step tutorials: AI, design, video editing aur online kamai.</p><input class="search" id="s" placeholder="Tutorial talash karein..." value="${q}"></section>
+ <div class="chips">${cats.map(c=>`<button class="chip ${c==cur?'on':''}" data-c="${c}">${c}</button>`).join('')}</div>
+ <div class="grid">${list.map(a=>`<div class="card" onclick="go('post/${a.id}')"><span class="tag">${a.cat}</span><h3>${a.t}</h3><p>${a.d}</p><span class="meta">${a.m} minute parhai</span></div>`).join('')||'<div class="empty">Koi tutorial nahi mila.</div>'}</div>
+ <div class="ad">Ad jagah (AdSense code yahan lagayein)</div>`;
+ document.getElementById('s').oninput=function(e){q=e.target.value;var p=e.target.selectionStart;home();var s=document.getElementById('s');s.focus();s.setSelectionRange(p,p);};
+ app.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{cur=b.dataset.c;home();});
+}
+function post(id){
+ var a=A.find(x=>x.id==id);if(!a){home();return;}
+ document.title=a.t+" – AI Seekho";
+ var more=A.filter(x=>x.id!=id).slice(0,3);
+ app.innerHTML=`<button class="back" onclick="go('')">← Wapas</button><article><span class="tag">${a.cat}</span><h1>${a.t}</h1><div class="meta" style="color:var(--muted);font-size:.85rem">${a.m} minute parhai</div>${a.b}<div class="ad">Ad jagah</div></article>
+ <h3 style="max-width:760px;margin:24px auto 10px">Aur parhein</h3><div class="grid" style="max-width:760px;margin:auto">${more.map(m=>`<div class="card" onclick="go('post/${m.id}')"><span class="tag">${m.cat}</span><h3>${m.t}</h3></div>`).join('')}</div>`;
+ scrollTo(0,0);
+}
+function page(k){
+ var P={about:`<h1>About</h1><p>AI Seekho ek blog hai jahan AI tools aur software ke tutorials Roman Urdu mein aasan tareeqe se sikhaye jate hain. Maqsad ye hai ke har koi naye tools se faida utha sake.</p>`,
+ privacy:`<h1>Privacy Policy</h1><p>Ye site aapki zaati maloomat sirf us waqt leti hai jab aap contact form ke zariye khud bhejte hain. Teesri party ads (jaise Google AdSense) cookies istemal kar sakte hain. Aap apne browser ki settings se cookies band kar sakte hain.</p><p>Is policy mein badlav ho sakta hai.</p>`,
+ contact:`<h1>Contact</h1><p>Sawal ya tajaweez bhejein:</p><input id="n" placeholder="Aapka naam"><input id="e" placeholder="Email"><textarea id="m" rows="4" placeholder="Paigham"></textarea><button class="btn" id="send">Bhejein</button><p id="ok" style="color:var(--muted)"></p>`};
+ app.innerHTML=`<div class="box">${P[k]}</div>`;
+ if(k=="contact")document.getElementById('send').onclick=function(){var s=encodeURIComponent("Blog contact: "+document.getElementById('n').value),b=encodeURIComponent(document.getElementById('m').value+"\n"+document.getElementById('e').value);document.getElementById('ok').textContent="Email app khul raha hai, wahan se paigham bhej dein.";location.href="mailto:miansaidzia8@gmail.com?subject="+s+"&body="+b;};
+ scrollTo(0,0);
+}
+function route(){
+ var h=location.hash.slice(1);document.title="AI Seekho – AI Tools & Software Tutorials";
+ if(h.indexOf('post/')==0)post(h.slice(5));else if(['about','contact','privacy'].includes(h))page(h);else home();
+}
+addEventListener('hashchange',route);
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.getElementById('th').onclick=function(){var r=document.documentElement,d=r.dataset.theme=="dark"||(!r.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches);r.dataset.theme=d?"light":"dark";};
+route();
+</script>
+</body>
+</html>
